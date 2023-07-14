@@ -2,26 +2,85 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --primary-color-light: theme(colors.primaryColor.light);
+    --border-color: theme(colors.borderColor.DEFAULT);
+    --border-width: theme(borderWidth.2);
+    --border-radius: theme(borderRadius.md);
+  }
+
+  input,
+  select {
+    padding: theme(padding.3);
+    border-radius: var(--border-radius);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+@layer components {
+  .section-content-padding {
+    padding: theme(padding.16) theme(padding.32);
+  }
+
+  @media screen and (max-width: 1024px) {
+    .section-content-padding {
+      padding: theme(padding.12) theme(padding.16);
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .section-content-padding {
+      padding: theme(padding.8) theme(padding.4);
+    }
+  }
+
+  .half-background {
+    background: linear-gradient(
       to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      var(--primary-color-light) 60%,
+      transparent 25%
+    );
+  }
+
+  .cardWithBorder {
+    border-width: var(--border-width);
+    border-color: var(--border-color);
+    border-radius: var(--border-radius);
+  }
+
+  .modalCancelDiv {
+    height: theme(height.8);
+    width: theme(width.8);
+    background-color: black;
+    left: 100%;
+    top: 0;
+    margin: -1rem;
+    position: absolute;
+    border-radius: 999px;
+    border-width: var(--border-width);
+    border-color: var(--border-color);
+    cursor: pointer;
+  }
+
+  .modalCancelDiv::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 75%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background-color: var(--border-color);
+  }
+
+  .modalCancelDiv::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 75%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    background-color: var(--border-color);
+  }
 }
