@@ -2,6 +2,7 @@ import React from "react";
 import HeaderSection from "@/components/HeaderSection";
 import FormSection from "@/components/FormSection";
 import VideoSection from "@/components/VideoSection";
+import TestimonialSection from "@/components/TestimonialSection";
 
 function Main(): JSX.Element {
   return (
@@ -9,6 +10,7 @@ function Main(): JSX.Element {
       <HeaderSection />
       <FormSection />
       <VideoSection />
+      <TestimonialSection />
     </main>
   );
 }
