@@ -32,7 +32,7 @@ function FormSection(): JSX.Element {
             return <Highlight {...item} key={item.header} />;
           })}
         </div>
-        <FormCard/>
+        <FormCard />
       </div>
     </section>
   );

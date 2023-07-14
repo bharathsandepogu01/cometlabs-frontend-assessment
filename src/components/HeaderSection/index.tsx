@@ -1,18 +1,23 @@
-import React from 'react'
-import AppText from '../AppText';
-import Image from 'next/image';
+import React from "react";
+import AppText from "../AppText";
+import Image from "next/image";
 
 const data = {
-    headerText: `Describe the value of booking an appointment`,
-    headerSubText: `No need to get clever. Tell people exactly what you're offering, then
+  headerText: `Describe the value of booking an appointment`,
+  headerSubText: `No need to get clever. Tell people exactly what you're offering, then
         use this space to communicate your key value proposition.`,
-}
+};
 
-function HeaderSection():JSX.Element {
+function HeaderSection(): JSX.Element {
   return (
     <section className="section-content-padding bg-header-section bg-no-repeat bg-cover">
       <div className="relative h-[35px] sm:w-[150px] w-[120px]">
-        <Image src={"/icons/multor-logo.svg"} alt="logo" fill loading={"lazy"}/>
+        <Image
+          src={"/icons/multor-logo.svg"}
+          alt="logo"
+          fill
+          loading={"lazy"}
+        />
       </div>
       <AppText
         tag="h1"

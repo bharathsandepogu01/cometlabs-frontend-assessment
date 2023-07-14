@@ -1,5 +1,5 @@
-import React from 'react'
-import FeatureCard from './FeatureCard';
+import React from "react";
+import FeatureCard from "./FeatureCard";
 
 const data = [
   {
@@ -25,14 +25,14 @@ const data = [
   },
 ];
 
-function FeatureSection() {
+function FeatureSection(): JSX.Element {
   return (
-    <section className='section-content-padding grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-center items-stretch gap-8 '>
-        {data.map((item) => {
-            return <FeatureCard {...item} key={item.header}/>
-        })}
+    <section className="section-content-padding grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-center items-stretch gap-8 ">
+      {data.map((item) => {
+        return <FeatureCard {...item} key={item.header} />;
+      })}
     </section>
-  )
+  );
 }
 
 export default FeatureSection;

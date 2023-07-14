@@ -20,12 +20,20 @@ const data = [
   },
 ];
 
-function AboutSection() {
-  return <section className="section-content-padding flex flex-col md:gap-8 gap-4">
-    {data.map((item, index) => {
-       return <AboutCard flipCard={index % 2 === 0} {...item} key={item.colorHeader}/> 
-    })}
-  </section>;
+function AboutSection(): JSX.Element {
+  return (
+    <section className="section-content-padding flex flex-col md:gap-8 gap-4">
+      {data.map((item, index) => {
+        return (
+          <AboutCard
+            flipCard={index % 2 === 0}
+            {...item}
+            key={item.colorHeader}
+          />
+        );
+      })}
+    </section>
+  );
 }
 
 export default AboutSection;

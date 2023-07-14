@@ -3,7 +3,7 @@ import IAppButtonProps from "./types";
 import classNames from "classnames";
 import AppText from "../AppText";
 
-function AppButton(props: IAppButtonProps) {
+function AppButton(props: IAppButtonProps): JSX.Element {
   const { ariaLabel, onClick, buttonType, buttonText, children, ...restProps } =
     props;
   return (

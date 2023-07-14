@@ -29,7 +29,7 @@ const testimonials = [
   },
 ];
 
-function TestimonialSection():JSX.Element {
+function TestimonialSection(): JSX.Element {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const handlePrev = () => {
@@ -53,11 +53,16 @@ function TestimonialSection():JSX.Element {
       aria-label={"click for previous testimonial"}
     >
       <div className="relative md:h-10 md:w-10 h-6 w-6 rotate-180">
-        <Image src={"/images/arrow-image.png"} alt={"prev"} fill loading={"lazy"}/>
+        <Image
+          src={"/images/arrow-image.png"}
+          alt={"prev"}
+          fill
+          loading={"lazy"}
+        />
       </div>
     </div>
   );
-  
+
   const rightArrow = (
     <div
       className="p-4 rounded-full bg-primaryColor-light cursor-pointer"
@@ -65,24 +70,27 @@ function TestimonialSection():JSX.Element {
       aria-label={"click for next testimonial"}
     >
       <div className="relative md:h-10 md:w-10 h-6 w-6">
-        <Image src={"/images/arrow-image.png"} alt={"next"} fill loading={"lazy"}/>
+        <Image
+          src={"/images/arrow-image.png"}
+          alt={"next"}
+          fill
+          loading={"lazy"}
+        />
       </div>
     </div>
   );
 
   return (
     <section className="section-content-padding text-center">
-        <AppText tag={"h2"} bold default primary>
-          {`DON'T JUST TAKE OUR WORD FOR IT`}
-        </AppText>
-        <div className="md:hidden flex justify-center items-center gap-8 mt-6">
-          {leftArrow}
-          {rightArrow}
-        </div>
-      <div className="flex gap-8 items-center justify-center md:mt-20 mt-10">
-        <div className="md:block hidden">
+      <AppText tag={"h2"} bold default primary>
+        {`DON'T JUST TAKE OUR WORD FOR IT`}
+      </AppText>
+      <div className="md:hidden flex justify-center items-center gap-8 mt-6">
         {leftArrow}
-        </div>
+        {rightArrow}
+      </div>
+      <div className="flex gap-8 items-center justify-center md:mt-20 mt-10">
+        <div className="md:block hidden">{leftArrow}</div>
         <div
           className={`flex flex-1 flex-col items-center justify-center text-center p-8}`}
         >
@@ -112,9 +120,7 @@ function TestimonialSection():JSX.Element {
             {testimonial.description}
           </AppText>
         </div>
-        <div className="md:block hidden">
-        {rightArrow}
-        </div>
+        <div className="md:block hidden">{rightArrow}</div>
       </div>
     </section>
   );

@@ -24,7 +24,7 @@ const appointmentOptions = [
   "type 3",
 ];
 
-function FormCard() {
+function FormCard(): JSX.Element {
   const formRef = useRef<HTMLFormElement | null>(null);
 
   const [formStates, setFormStates] = useState<IFormStates>({
@@ -202,7 +202,11 @@ function FormCard() {
                         p-4 absolute left-0 right-0 bottom-0 top-0 m-auto rounded-md 
                         border-t-4 border-primaryColor flex flex-col items-center justify-center text-center`}
         >
-          <div className="modalCancelDiv" onClick={onClickModalCancel} aria-label={"click to close modal"}/>
+          <div
+            className="modalCancelDiv"
+            onClick={onClickModalCancel}
+            aria-label={"click to close modal"}
+          />
           <AppText
             tag="h3"
             extraMedium
