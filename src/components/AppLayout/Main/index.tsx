@@ -3,6 +3,7 @@ import HeaderSection from "@/components/HeaderSection";
 import FormSection from "@/components/FormSection";
 import VideoSection from "@/components/VideoSection";
 import TestimonialSection from "@/components/TestimonialSection";
+import FeatureSection from "@/components/FeatureSection";
 
 function Main(): JSX.Element {
   return (
@@ -11,6 +12,7 @@ function Main(): JSX.Element {
       <FormSection />
       <VideoSection />
       <TestimonialSection />
+      <FeatureSection />
     </main>
   );
 }
