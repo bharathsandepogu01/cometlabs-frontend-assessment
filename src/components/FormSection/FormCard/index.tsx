@@ -198,7 +198,7 @@ function FormCard(): JSX.Element {
       </form>
       <AppModal showModal={formStates.success}>
         <div
-          className={`max-w-[400px] h-[300px] bg-backgroundColor-primary 
+          className={`max-w-[400px] w-[80%] h-[300px] bg-backgroundColor-primary 
                         p-4 absolute left-0 right-0 bottom-0 top-0 m-auto rounded-md 
                         border-t-4 border-primaryColor flex flex-col items-center justify-center text-center`}
         >
