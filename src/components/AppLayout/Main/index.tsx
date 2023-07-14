@@ -4,6 +4,7 @@ import FormSection from "@/components/FormSection";
 import VideoSection from "@/components/VideoSection";
 import TestimonialSection from "@/components/TestimonialSection";
 import FeatureSection from "@/components/FeatureSection";
+import AboutSection from "@/components/AboutSection";
 
 function Main(): JSX.Element {
   return (
@@ -13,6 +14,7 @@ function Main(): JSX.Element {
       <VideoSection />
       <TestimonialSection />
       <FeatureSection />
+      <AboutSection />
     </main>
   );
 }
